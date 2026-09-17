@@ -1,64 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Submission Successful</title>
-    <style>
-        body {
-            background-color: #a40000;
-            color: white;
-            text-align: center;
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            background-color: #ffffff;
-            padding: 20px;
-            width: 80%;
-            max-width: 400px;
-            margin: 50px auto;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-        }
-        .brand-logo {
-            width: 120px;
-            max-width: 90%;
-            height: auto;
-            margin-bottom: 10px;
-        }
-        img {
-            width: 100px;
-            margin-bottom: 10px;
-        }
-        .message {
-            color: #a40000;
-            font-size: 18px;
-            margin-top: 10px;
-        }
-        a {
-            color: #a40000;
-            text-decoration: none;
-            font-weight: bold;
-            display: block;
-            margin-top: 20px;
-        }
-        .footer {
-            margin-top: 20px;
-            font-size: 13px;
-            color: #ffffff;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Submission Successful</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #111111;
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* HEADER */
+    .header {
+      height: 64px;
+      background: #181818;
+      border-bottom: 1px solid #292929;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 0 18px;
+    }
+
+    .brand {
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .brand span {
+      color: #e50914;
+    }
+
+    .menu-btn {
+      width: 42px;
+      height: 38px;
+
+      border: none;
+      border-radius: 7px;
+
+      background: #e50914;
+      color: #ffffff;
+
+      font-size: 20px;
+    }
+
+    /* MAIN */
+    .main {
+      width: 100%;
+      max-width: 520px;
+
+      margin: auto;
+      padding: 30px 18px 40px;
+
+      text-align: center;
+    }
+
+    /* CARD */
+    .success-card {
+      background: #181818;
+      border: 1px solid #292929;
+      border-radius: 16px;
+
+      padding: 30px 22px;
+
+      box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.35);
+    }
+
+    /* LOGO */
+    .logo-wrap {
+      margin-bottom: 25px;
+    }
+
+    .logo {
+      width: 100%;
+      max-width: 170px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* SUCCESS ICON */
+    .success-icon {
+      width: 76px;
+      height: 76px;
+
+      margin: 0 auto 20px;
+
+      border-radius: 50%;
+
+      background: rgba(229, 9, 20, 0.12);
+      border: 2px solid #e50914;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 38px;
+      color: #e50914;
+    }
+
+    /* TEXT */
+    .title {
+      font-size: 27px;
+      font-weight: 900;
+
+      margin-bottom: 10px;
+    }
+
+    .title span {
+      color: #e50914;
+    }
+
+    .message {
+      color: #a8a8a8;
+      font-size: 14px;
+      line-height: 1.7;
+
+      max-width: 380px;
+      margin: 0 auto 25px;
+    }
+
+    /* STATUS */
+    .status-box {
+      background: #111111;
+      border: 1px solid #292929;
+      border-radius: 10px;
+
+      padding: 15px;
+
+      margin-bottom: 22px;
+    }
+
+    .status-title {
+      font-size: 13px;
+      font-weight: 800;
+
+      margin-bottom: 5px;
+    }
+
+    .status-text {
+      color: #888888;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    /* BUTTON */
+    .home-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 100%;
+      height: 50px;
+
+      background: #e50914;
+      color: #ffffff;
+
+      border-radius: 8px;
+
+      text-decoration: none;
+
+      font-size: 15px;
+      font-weight: 800;
+
+      transition: 0.2s ease;
+    }
+
+    .home-btn:hover {
+      background: #c90812;
+    }
+
+    /* FOOTER */
+    .footer {
+      text-align: center;
+
+      color: #666666;
+      font-size: 12px;
+
+      padding: 0 15px 25px;
+
+      line-height: 1.6;
+    }
+
+    /* MOBILE */
+    @media (max-width: 400px) {
+
+      .main {
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+
+      .success-card {
+        padding: 25px 17px;
+      }
+
+      .title {
+        font-size: 24px;
+      }
+
+    }
+  </style>
 </head>
+
 <body>
 
-    <div class="container">
-        <img class="brand-logo" src="logo.png" alt="Your Logo">
-        <img src="https://i.imgur.com/oiYv5K9.jpeg" alt="Success">
-        <p class="message">AN EMAIL WILL BE SENT TO YOU IMMEDIATELY. YOUR INFORMATION IS BEING VALIDATED.</p>
-        <a href="index.html">Back</a>
+  <!-- HEADER -->
+  <header class="header">
+
+    <div class="brand">
+      Free<span>Data</span>
     </div>
 
-    <div class="footer">© 2026 Free Data. All rights reserved.</div>
+    <button class="menu-btn" type="button">
+      ☰
+    </button>
+
+  </header>
+
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <div class="success-card">
+
+      <!-- LOGO -->
+      <div class="logo-wrap">
+
+        <!-- Replace this URL with your actual logo URL -->
+        <img
+          src="https://i.imgur.com/VhaROCK.png" 
+          alt="Free Data Logo"
+          class="logo"
+        >
+
+      </div>
+
+
+      <!-- SUCCESS ICON -->
+      <div class="success-icon">
+        ✓
+      </div>
+
+
+      <!-- TITLE -->
+      <h1 class="title">
+        Submission <span>Successful!</span>
+      </h1>
+
+
+      <!-- MESSAGE -->
+      <p class="message">
+        Your information has been submitted successfully.
+        Thank you for completing the form.
+      </p>
+
+
+      <!-- STATUS -->
+      <div class="status-box">
+
+        <div class="status-title">
+          ✅ Submission Received
+        </div>
+
+        <div class="status-text">
+          Your details have been received and are being processed.
+        </div>
+
+      </div>
+
+
+      <!-- BACK BUTTON -->
+      <a
+        href="index.html"
+        class="home-btn"
+      >
+        ← Back to Home
+      </a>
+
+    </div>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    © 2026 Free Data. All rights reserved.
+  </footer>
 
 </body>
 </html>

